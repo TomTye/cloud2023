@@ -1,0 +1,18 @@
+server:
+  port: 7001
+
+eureka:
+  instance:
+    hostname: eureka7001.com  #eureka服务端的实例名字
+  client:
+    register-with-eureka: false    #表识不向注册中心注册自己
+    fetch-registry: false
+    service-url:
+#      defaultZone: http://eureka7002.com:7002/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloud2023?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: password
